@@ -42,7 +42,7 @@ void loop() {
   for (int index = 0; index < 14; index++) // index < [num of buttons]
   {
     
-    int currentButtonState = !digitalRead(index + pinToButtonMap);
+    int currentButtonState = !digitalRead(index);
     if (currentButtonState != lastButtonState[index])
     {
       Joystick.setButton(index, currentButtonState);
